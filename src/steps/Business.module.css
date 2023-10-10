@@ -1,0 +1,37 @@
+.title {
+  text-transform: uppercase;
+  color: #74b0f4;
+  align-self: flex-start;
+  font-weight: 500;
+}
+.infos {
+  font-size: 14px;
+  color: #2d2e30;
+  text-align: left;
+}
+.section {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.sectionHeader {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.container {
+  margin-top: 20px;
+}
+.stepInfos {
+  color: #bec8e9;
+  font-size: 18px;
+}
+.brandTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+.infosHeader {
+  color: #606d87;
+  width: 500px;
+  margin: auto;
+}

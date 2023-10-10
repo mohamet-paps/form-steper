@@ -1,0 +1,22 @@
+.container {
+  margin-top: 20px;
+}
+.section {
+  text-align: center;
+  color: #526b93;
+  margin-bottom: 20px;
+}
+.stepInfos {
+  color: #bec8e9;
+  font-size: 18px;
+}
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.infos {
+  color: #606d87;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}

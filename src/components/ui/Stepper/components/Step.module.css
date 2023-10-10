@@ -1,0 +1,67 @@
+.stepperLine {
+  background-color: red;
+}
+.root {
+  width: 100%;
+}
+.count {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #bec8e9;
+  color: white;
+}
+.activeCount {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  background-color: white;
+  font-weight: 500;
+  color: #70b0fc;
+}
+.label {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+}
+.stepperLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding: 1rem;
+  background-color: #eeeffd;
+}
+.activeStepperLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+
+  padding: 1rem;
+  margin-right: 20px;
+  background-color: #71b1fc;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  z-index: 100;
+  color: #fff;
+  box-shadow: rgba(113, 178, 252, 0.3) 4.95px -0.05px 5.6px;
+}
+.alredyacivedStepperLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  padding: 1rem;
+  background-color: #71b1fc;
+}
