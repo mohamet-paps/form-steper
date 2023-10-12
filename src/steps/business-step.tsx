@@ -51,7 +51,12 @@ function BusinessStep() {
           />
         </Row>
         <Row>
-          <Input label="Zip Code" placeholder="Input your Zip Code" required />
+          <Input
+            label="Zip Code"
+            placeholder="Input your Zip Code"
+            required
+            name="taxId"
+          />
           <Input
             label="Tax ID Number"
             placeholder="input Tax ID Number"
