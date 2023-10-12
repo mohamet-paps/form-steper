@@ -1,4 +1,5 @@
 import Input from "../components/ui/Input";
+import { InputSelect } from "../components/ui/Input/input-select";
 import Row from "../components/ui/Row";
 import { useRegisterForm } from "../contexts/register-form";
 
@@ -25,12 +26,12 @@ function BusinessStep() {
             name="brandName"
             value={formValue.brandName}
           />
-          <Input
-            label="Brand Type"
-            placeholder="Select your Brand Type"
+          <InputSelect
             required
-            name="brandType"
+            label="Brand Type"
+            options={["Brand1", "Brand2"]}
             value={formValue.brandType}
+            name="brandType"
           />
         </Row>
         <Row>

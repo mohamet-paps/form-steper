@@ -1,4 +1,4 @@
-import { ChangeEvent, createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 interface RegisterContextProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

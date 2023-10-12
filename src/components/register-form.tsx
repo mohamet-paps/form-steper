@@ -6,6 +6,7 @@ import Button from "./ui/Button";
 import Step from "./ui/Stepper/components/Step";
 
 import styles from "./Register.module.css";
+import { useRegisterForm } from "../contexts/register-form";
 
 const ViewStep: Record<number, () => JSX.Element> = {
   0: () => <ProfileStep />,
@@ -25,6 +26,18 @@ function RegisterForm() {
 
   const [value, setValue] = useState(0);
 
+  const { formValue } = useRegisterForm();
+
+  const handleNextStep = () => {
+    if (value == 2) {
+      console.log({ formValue });
+    } else {
+      setValue((prev) => (prev < steps.length ? prev + 1 : prev));
+    }
+  };
+  const handlePrevStep = () => {
+    setValue((prev) => (prev > 0 ? prev - 1 : prev));
+  };
   return (
     <div className={styles.form}>
       <Stepper activeStep={value}>
@@ -40,21 +53,16 @@ function RegisterForm() {
           style={{
             display: "flex",
             justifyContent: "space-between",
+            flexDirection: value > 0 ? "row" : "row-reverse",
           }}
         >
-          <Button
-            endIcon={<PrevIcon />}
-            onClick={() => setValue((prev) => (prev > 0 ? prev - 1 : prev))}
-          >
-            Prev Step
-          </Button>
-          <Button
-            startIcon={<NextIcon />}
-            onClick={() =>
-              setValue((prev) => (prev < steps.length ? prev + 1 : prev))
-            }
-          >
-            Next Step
+          {value > 0 ? (
+            <Button endIcon={<PrevIcon />} onClick={handlePrevStep}>
+              Prev Step
+            </Button>
+          ) : undefined}
+          <Button startIcon={<NextIcon />} onClick={handleNextStep}>
+            {value < 2 ? "Next Step" : "Send"}
           </Button>
         </div>
       </div>
